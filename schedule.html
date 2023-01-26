@@ -1,0 +1,87 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <title>Current Schedule</title>
+        <meta charset="utf-8">
+        <style type="text/css">
+        body{ background-image: url("bg1.jpeg");border:10px groove rgb(241, 95, 205);background-color: rgb(235, 255, 248);
+        font-family:'Broadway','MD이솝체',Georgia, 'Times New Roman', Times, serif;}
+        h2{border:4px dotted rgb(10, 109, 15);background-color:antiquewhite;font-size:35pt;margin-top:0em;margin-bottom:1em;
+        text-shadow:3px 3px 4px rgb(171, 171, 255); text-align: center;}
+        #time{table-layout:fixed;text-align: center;background-color: floralwhite; }
+        th{background-color: rgb(255, 243, 218);}
+        tr{height: 60px;}
+        fieldset{font-size: x-large;}
+        </style>
+    </head>
+    <body>
+        <h2><strong>Current Schedule</strong></h2>
+        <table border="1" width = "1000px" id="time">
+            <caption style="font-size: xx-large;background-color: greenyellow;">2021-1학기 시간표</caption>
+            <div style="background-color: rgb(252, 247, 182);float: right;font-size: xx-large;"><a href="index.html">Back To Home</a>
+            </div>
+            
+            <tr>
+                <th></th><th>Mon</th><th>Tue</th><th>Wed</th>
+                <th>Thu</th><th>Fri</th><th>Sat</th><th>Sun</th>
+            </tr>
+            <tr>
+                <td>9:00~10:30</td><td>객체지향<br>프로그래밍
+                </td><td>&nbsp;</td><td>객체지향<br>프로그래밍</td>
+                <td>&nbsp;</td><td>&nbsp;</td><td>&nbsp;</td><td rowspan="2">자바 스터디</td>
+            </tr>
+            <tr>
+                <td>10:30~12:00</td><td>선형대수학</td><td>&nbsp;</td><td>선형대수학</td>
+                <td>&nbsp;</td><td>&nbsp;</td><td>&nbsp;</td>
+            </tr>
+            <tr>
+                <td>12:00~13:30</td><td>데이터구조</td><td>&nbsp;</td><td>데이터구조</td>
+                <td>&nbsp;</td><td>&nbsp;</td><td>&nbsp;</td><td>&nbsp;</td>
+
+            </tr>
+            <tr>
+                <td>13:30~15:00</td><td>법학개론</td><td>&nbsp;</td><td>법학개론</td>
+                <td>&nbsp;</td><td>&nbsp;</td><td>&nbsp;</td><td>&nbsp;</td>
+            </tr>
+            <tr>
+                <td>15:00~16:30 </td><td>웹프로그래밍<br>기초</td><td>IT기기구조</td><td>웹프로그래밍<br>기초</td>
+                <td>IT기기구조</td><td>&nbsp;</td><td>&nbsp;</td><td>&nbsp;</td>
+            </tr>
+            <tr>
+                <td>16:30~18:30</td><td>&nbsp;</td><td>&nbsp;</td><td>&nbsp;</td>
+                <td rowspan="2">비지니스와<br>문화</td><td>&nbsp;</td><td>&nbsp;</td><td>&nbsp;</td>
+            </tr>
+            <tr>
+                <td>18:30~19:45</td><td>&nbsp;</td><td>&nbsp;</td><td>&nbsp;</td>
+                <td>&nbsp;</td><td>&nbsp;</td><td>&nbsp;</td>
+            </tr>
+            
+        </table><br>
+        <form method="POST" action="form_app.js">
+            <div style="text-align: right; padding-right: 500px;"><button type="submit">수정</button>
+            <button type="submit">저장</button></div>
+            <p id="date" onmouseover="update();" >마지막으로 작성된 날짜?</p>
+            <script type="text/javascript">
+                function update(){
+                    var ud=new Date();
+                    document.getElementById("date").innerHTML=ud.toDateString();
+                }
+             
+             </script>
+            <fieldset>
+                <legend style="background-color: floralwhite;">이외 활동</legend>
+                알바는 합니까? : <input type="radio" name="radioptj"  value="yes" checked/> 예
+                <input type="radio" name="radioptj"  value="no"/> 아니오<br>
+
+                동아리는 합니까? : <input type="radio" name="dong"  value="yes" checked/> 예
+                <input type="radio" name="dong"  value="no"/> 아니오<br>
+
+                공모전 및 대회는 합니까? : <input type="radio" name="contest"  value="yes" checked/> 예
+                <input type="radio" name="contest"  value="no"/> 아니오<br>
+
+            </fieldset>
+
+        </form>
+        <footer>Copyright 2021. KimEunSeo all rights reserved.</footer>
+    </body>
+</html>

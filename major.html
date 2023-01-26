@@ -1,0 +1,71 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <title>For Major_IT</title>
+        <meta charset="utf-8">
+        <style type="text/css">
+        body{ background-image: url("bg1.jpeg");border:10px groove rgb(241, 95, 205);background-color: rgb(235, 255, 248);font-family:'Broadway','MD이솝체',Georgia, 'Times New Roman', Times, serif;}
+        h2{border:4px dotted rgb(10, 109, 15);background-color:antiquewhite;font-size:35pt;margin-top:0em;margin-bottom:1em;text-shadow:3px 3px 4px rgb(171, 171, 255); text-align: center;}
+        h3{display:inline;font-size: 30pt; background-color: rgb(172, 233, 122);text-shadow:3px 3px 4px rgb(171, 171, 255);}
+        legend, li{font-size: x-large;}
+        </style>
+    </head>
+    <body onmousedown="start();" onmousemove="draw();" onmouseup="stop();">
+        <h2><strong>For Major_IT</strong></h2>
+        <h3>개발한 프로젝트 목록</h3>
+        <div style="background-color: rgb(252, 247, 182);float: right;font-size: xx-large;"><a href="index.html">Back To Home</a></div>
+        <ol>
+            <li>웹프로그래밍 기초 과제 - 나만의 홈페이지 개발 중...<br>
+                <a onclick="alrt();" href="homepage proposal 2016257.pptx">기획서 다운로드</a>
+                
+            </li>
+            <li>객체지향프로그래밍 텀 프로젝트 : 고령층 친화 영화 예매 키오스크</li><br>
+            <h4 >아이디어 기록 메모장</h4>
+        </ol>
+        <script type="text/javascript">
+        function alrt(){
+            alert("다운로드가 시작됩니다.");
+        }
+        </script>
+
+<canvas id="myCanvas" width="500" height="500" style="border-style: solid; "></canvas>
+
+<script type="text/javascript">
+  var canvas = document.getElementById("myCanvas");
+  var myContext = canvas.getContext("2d");
+
+  var stopped = true;
+
+  function start() {
+      e = window.event;
+      myContext.moveTo(e.clientX, e.clientY-80);
+      stopped = false;
+  }
+
+  function stop() {
+      stopped = true;
+  }
+
+  function draw() {
+      if (!stopped) {
+          e = window.event;
+          myContext.lineTo(e.clientX, e.clientY-80);
+          myContext.stroke();
+      }
+  }
+
+</script>
+
+        <form method="POST" action="form_app.js">
+            <fieldset>
+                <legend style="background-color: floralwhite;">프로젝트 목록 추가</legend>
+                <input type="file" name="myfile"/><br><br>
+                <label for ="addpj">프로젝트 설명 추가 : </label>
+                <input type="text" name="pjbox" size="100" id="addpj" value="추가할 프로젝트명을 작성하세요!" onclick="this.select();"/>
+                <button type="submit">추가</button>
+            </fieldset>
+
+        </form>
+        <footer>Copyright 2021. KimEunSeo all rights reserved.</footer>
+    </body>
+</html>

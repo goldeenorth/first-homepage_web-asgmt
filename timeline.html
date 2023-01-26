@@ -1,0 +1,141 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <title>Simple Timeline</title>
+        <meta charset="utf-8">
+        <style type="text/css">
+        .cate{font-family:'Broadway',Georgia, 'Times New Roman', Times, serif;font-size:25pt;position:relative; background-color:antiquewhite;
+        border:4px dotted rgb(10, 109, 15);left:20%;width:60%;text-shadow:3px 3px 4px cyan}
+        div,h2, p{font-family:'Broadway',Georgia, 'Times New Roman', Times, serif;}
+        h2{background-color: chartreuse;}
+        .div {text-align:center;width:700px; height:150px; float: left;}
+        #time{ width:50%;background-color: rgb(238, 255, 238);}
+        caption{font-size:25pt;font-weight: bolder;margin:10px;background-color: blanchedalmond;border:4px dotted rgb(10, 109, 15);text-shadow:3px 3px 4px rgb(235, 195, 143);}
+        #table {text-align: center;}
+        body{ background-image: url("bg1.jpeg");border:10px groove rgb(241, 95, 205);background-color: rgb(235, 255, 248);}
+        </style>
+    </head>
+    <body>
+        <div id="table">
+        <table border="1" id="time">
+            <caption>MY Timeline</caption>
+            <tr>
+                <th style="background-color: chartreuse;">연도</th><th style="background-color: chartreuse;">내용</th>
+            </tr>
+            <tr>
+                <td>2000.06.12</td><td>출생<a href="#kid">&nbsp;&nbsp;click!</a></td>
+            </tr>
+            <tr>
+                <td>2007.03.02 ~ 2013.02</td><td>상일초등학교 입학 및 졸업</td>
+            </tr>
+            <tr>
+                <td>2013.03.02 ~ 2016.02</td><td>상일중학교 입학 및 졸업</td>
+            </tr>
+            <tr>
+                <td>2016.03.02 ~ 2019.02</td><td>인천포스코고등학교 입학 및 졸업</td>
+            </tr>
+            <tr>
+                <td>2020.01.02 ~ 2020.10.</td><td>첫 사회생활! - 나리스키친 알바</td>
+            </tr>
+            <tr>
+                <td>2020.03.02 ~ </td><td> 현재 숙명여자대학교 IT공학전공 재학 중</td>
+            </tr>
+
+        </table></div>
+
+        <script>
+            
+            var count = 1;
+            var count_last=1;
+            
+              
+              function add() {
+                
+                for(count=1;count<6;count++){
+                   
+                    var add1 = "<input type=text name=text"+count+" id=text"+count+" size=28>";
+                    var add2 = "<input type=text name=text"+count+" id=text"+count+" size=66>";
+                    
+                    var table_name = document.getElementById("tt");
+                    
+                    var new0 = table_name.insertRow();
+                    
+                    var new1 = new0.insertCell();
+                    var new2 = new0.insertCell();
+                   
+                    new1.innerHTML = add1;
+                    new2.innerHTML = add2;
+                    
+                    count_last++;
+                }
+                   
+            }
+            
+             
+              function Delete() {
+            
+                var table = document.getElementById('tt');
+                var del = new String('더 이상 삭제할 내용이 없습니다.');
+                
+                if (table.rows.length < 1){
+                 alert(del);
+                 return;
+                }
+            
+                table.deleteRow(table.rows.length - 1);
+          
+             count--;
+              }
+            </script>
+            
+            <button style="left:50%"onclick="add()">추가</button>
+            <button onclick="Delete()">삭제</button>
+            <table cellpadding=0 cellspacing=0 id="tt" border="1"style=" width:50%;background-color: rgb(238, 255, 238);">
+            </table>
+           
+
+        <div style="background-color: rgb(252, 247, 182);float: right;font-size: xx-large;"><a href="index.html">Back To Home</a></div>
+        <p>계속 추가 가능...</p>
+        
+
+        <h3 class="cate">About ME</h3>
+       
+        <figure>
+            <div class="div">
+            
+            <a href="timeline.html">
+                <img src="menu.jpg" alt="img" width="150" height="100"><br>
+                <figcaption>Simple Timeline</figcaption>
+            </a>
+            </div>
+           
+               <div> <a href="youth.html">
+                <img src="menu.jpg" alt="img" width="150" height="100"><br>
+                <figcaption>Record of Youth</figcaption></a>
+                </div>
+            
+            
+        </figure><br><br>
+       
+       
+    
+        <h3 class="cate">In College</h3>
+        <figure>
+            <div class="div"><a href="major.html">
+                <img src="menu.jpg" alt="img" width="150" height="100"><br>
+                <figcaption>For Major_IT</figcaption>
+            </a></div>
+            <div>
+            <a href="schedule.html">
+                <img src="menu.jpg" alt="img" width="150" height="100"><br>
+                <figcaption>Current Schedule</figcaption>
+            </a></div>
+        </figure><br>
+
+
+
+        <a id="kid"></a><h2 style="font-size: 25pt;">Picture of MY Childhood</h3>
+        <img src="kid.jpg">
+        <footer>Copyright 2021. KimEunSeo all rights reserved.</footer>
+    </body>
+</html>
